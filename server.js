@@ -13,8 +13,8 @@ const app = express();
 app.use(bodyParser.json());
 app.use(passport.initialize());
 
-app.use("/auth", authRoutes);
-app.use("/shipping", shippingRoutes);
+app.use("/api/auth", authRoutes);
+app.use("/api/shipping", shippingRoutes);
 
 sequelize
   .sync()

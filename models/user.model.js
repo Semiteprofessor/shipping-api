@@ -10,8 +10,8 @@ class User extends Model {
 
 User.init(
   {
-    id: {
-      type: DataTypes.INTEGER,
+    user_id: {
+      type: DataTypes.UUID,
       autoIncrement: true,
       primaryKey: true,
     },
@@ -24,7 +24,35 @@ User.init(
       allowNull: false,
       unique: true,
     },
-    password: {
+    password_hash: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+    },
+    password_salt: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+    },
+    phone: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    address: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    city: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    state: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    zipCode: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    country: {
       type: DataTypes.STRING,
       allowNull: false,
     },

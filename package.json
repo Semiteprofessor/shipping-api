@@ -3,12 +3,13 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "A shipping API with user authentication, email notifications, and file uploads.",
   "devDependencies": {
     "nodemon": "^3.1.4"
   },
